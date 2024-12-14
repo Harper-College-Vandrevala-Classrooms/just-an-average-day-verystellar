@@ -18,6 +18,8 @@ public class TestCalculator {
   void itWorks() {
     int[] nums = {24,72,83,19,9};
     int[] num = {1};
+    int[] even = {24,72};
+    int[] evenCall = calculator.filterEven(nums);
     assertEquals(calculator.maximumUsingForLoop(nums), 83);
     assertEquals(calculator.maximumUsingStream(nums), 83);
     assertEquals(calculator.minimumUsingForLoop(nums), 9);
@@ -34,6 +36,10 @@ public class TestCalculator {
     assertEquals(calculator.averageUsingStream(num), 1);
     assertEquals(calculator.sumUsingStream(num), 1);
     assertEquals(calculator.sumUsingForLoop(num), 1);
+    assertEquals(even[0], evenCall[0]);
+    assertEquals(even[1], evenCall[1]);
+    assertEquals(even.length, evenCall.length);
+
 
   }
 }

@@ -55,6 +55,10 @@ public class Calculator {
   if (nums == null || nums.length == 0) { return 0; }
   return Arrays.stream(nums).average().getAsDouble();
   }
+  int[] filterEven(int[] nums){
+    int[] even = Arrays.stream(nums).filter(x -> x % 2 == 0).toArray();
+    return even;
+  }
   public static void main(String[] args) {
     System.out.println("This class can house your driver program and / or your functions.");
   }
